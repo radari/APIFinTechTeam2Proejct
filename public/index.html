@@ -1,6 +1,7 @@
 <html ng-app="mittens">
 <head>
     <title> hello world</title>
+    <h1>MEAN STACK APP</h1>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script type="text/javascript" src="angular.min.js"></script>
@@ -63,7 +64,7 @@ getMeows();
 $scope.signin=function(){
   $http.put('/users/signin', {username:$scope.username, password:$scope.password})
   .then(function(res){
-alert('success');
+alert('login successful');
 $scope.email=res.data.user.email;
 $scope.mobile=res.data.user.mobile;
 
@@ -162,7 +163,6 @@ $http.post('/users',newUser).then(function(){
     </style>-->
 </head>
 <body>
-<h1 class="page-title"><a href="/">MEAN STACK APP</a></h1>
 <div ng-view>
 </div>
 </body>
